@@ -9,8 +9,9 @@ body{
   #F5F7FB;
 }
 
-.welcome-warpper{
-  height: 100vh;
+.welcome-warpper,
+.Qustion-item,
+main{
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -18,10 +19,15 @@ align-items: center;
 gap: 1em;
 }
 
-.welcome-title{
-  margin: 0;
+main,
+.welcome-warpper{
+  height: 100vh;
 }
 
+
+.qustion-item{
+  padding: 0;
+}
 .start-Btn{
 background-color: #4D5B9E;
 width: 193px;
@@ -39,3 +45,29 @@ color: #F5F7FB;
   font-weight: 400;
 font-size: 1rem;
 }
+
+
+.options-list{
+  list-style: none;
+  display: flex;
+ gap: 1em;
+}
+
+li{
+  padding: .2em 0.6em;
+  border: 1px solid #4D5B9E;
+  border-radius: 10px;
+  cursor: pointer;
+  }
+
+hr{
+  width: 100%;
+}
+
+
+.question-text{
+color: #293264;
+font-size:1rem ;
+font-weight: 700;
+}
+

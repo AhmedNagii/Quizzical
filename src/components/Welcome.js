@@ -1,11 +1,15 @@
 import React  from "react";
+import QuizPage from "./QuizPage";
 
 export default function Welcome() {
-  return (
+
+const [page , setPage] = React.useState(true)
+
+  return page? 
     <div className="welcome-warpper">
       <h1 className="welcome-title">Quizzical</h1>
       <p>Some description if needed</p>
-      <button className="start-Btn">Start Quiz</button>
-    </div>
-  );
+      <button onClick={() => setPage(false) }  className="start-Btn">Start Quiz</button>
+    </div> : <QuizPage/>
+  
 }
