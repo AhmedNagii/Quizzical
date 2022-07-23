@@ -9,7 +9,7 @@ const [page , setPage] = React.useState(true)
     <div className="welcome-warpper">
       <h1 className="welcome-title">Quizzical</h1>
       <p>Some description if needed</p>
-      <button onClick={() => setPage(false) }  className="start-Btn">Start Quiz</button>
-    </div> : <QuizPage/>
+      <button onClick={() => setPage(false)}  className="start-Btn">Start Quiz</button>
+    </div> : <QuizPage run = {page}/>
   
 }
