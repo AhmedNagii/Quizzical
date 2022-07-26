@@ -41,9 +41,14 @@ export default function QuizPage(props) {
    
   }, []);
 
+
+function countCorrectAnswers (){
+  setNumOfCorret(prevCount => prevCount + 1)
+}
+
   return (
     <main>
-      {allQuestions.forEach(q => console.log(q.correctAnswer))}
+   
       <h1>Quizzical</h1>
       {allQuestions.map((question) => {
         return (
@@ -53,11 +58,11 @@ export default function QuizPage(props) {
             correctAnswer={question.correctAnswer}
             allAnswers={question.answers}
             hasEnded={hasEnded}
-            
+            countCorrectAnswers = {countCorrectAnswers}
           />
         );
       })}
-      {hasEnded && <p>Correct Answers (5/5)</p>}
+      {hasEnded && <p>Correct Answers (5/{numOfCorret})</p>}
       <button
         className="check-answersBtn"
         onClick={hasEnded ? newQuiz : checkAnswers}
